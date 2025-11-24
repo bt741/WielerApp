@@ -1,0 +1,6 @@
+numpy>=2.3.5
+geojson>=3.2.0
+polyline>=2.0.3
+gpxpy>=1.6.2
+shapely>=2.1.2
+pyproj>= 3.7.2
