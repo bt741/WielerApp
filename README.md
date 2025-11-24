@@ -29,7 +29,7 @@
 # Usage
 To run the application, use the following command:
 ```bash
-python main.py -f <path_to_your_gpx
+python main.py -f <path_to_your_gpx>
 ```
 
 # DISCLAIMER
