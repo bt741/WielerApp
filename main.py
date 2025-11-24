@@ -3,6 +3,8 @@ import gpxpy
 import json
 import time
 import unicodedata
+import argparse
+
 from pathlib import Path
 from shapely.ops import nearest_points
 from shapely.geometry import shape as geom_shape, GeometryCollection
@@ -118,6 +120,14 @@ def neighbour_lookup(
     return smart_lookup(point, provinces_lookup, provinces_regions_map)
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="Process a GPX file.")
+    parser.add_argument('-f', '--file', required=True, help="path to your GPX file")
+    args = parser.parse_args()
+
+    gpx_path = Path(args.file)
+    if not gpx_path.exists():
+        raise SystemExit(f"GPX file not found: {gpx_path}")
+
     neighbour_map = load_neighbors("neighbours_map_5.0.json")
     province_map = json.load(open('province_map.json', 'r', encoding='utf-8'))
 
@@ -193,7 +203,6 @@ if __name__ == '__main__':
         region = Region(name, shapely_geom)
         provinces_lookup.append(region)
 
-    gpx_path = Path('routeyou-testroute.gpx')
     data = gpx_path.read_bytes()
     gpx_text = ""
 
