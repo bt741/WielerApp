@@ -33,6 +33,6 @@ python main.py -f <path_to_your_gpx>
 ```
 
 # DISCLAIMER
-The elapsed time shown in the output is the **Calculation time for the lookup**. As the script is server oriented,
+The elapsed time shown in the output is the **calculation time for the lookup**. As the script is server oriented,
 all the preprocessing ahead of time is not included in the elapsed time shown, since it can be performed once at
 startup.
