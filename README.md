@@ -5,13 +5,13 @@
    For **Linux** OG's and **Mac**:
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   source venv/bin/activate
    ```
    
    For **Windows** users:
    ```bash
    python -m venv venv
-   venv/scripts/activate # On Windows use `venv\Scripts\activate`
+   venv/scripts/activate
    ```
 
 3. Install the required packages:
