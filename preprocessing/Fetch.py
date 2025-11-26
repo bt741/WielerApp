@@ -34,7 +34,7 @@ def fetch_provinces():
         }
     ]
 
-    OUT_FILE = "province_map.json"
+    OUT_FILE = "../province_map.json"
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
